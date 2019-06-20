@@ -2,11 +2,12 @@ package com.kishkan91.Repository;
 
 import com.kishkan91.Items.Book;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BookRepoImpl implements BookRepo {
     private static BookRepoImpl instance;
-    private ArrayList<Book> bookItems = new ArrayList<>();
+    Map<String, Book> books = new HashMap<String, Book>();
 
     private BookRepoImpl(){
     }
@@ -18,11 +19,9 @@ public class BookRepoImpl implements BookRepo {
         return instance;
     }
 
-    public ArrayList<Book> getBooks(){
-        return this.bookItems;
+    public void addBook (Book book, String decimalNumber) {
+        books.put(decimalNumber, book);
     }
 
-    public void addBook (Book book){
-        this.bookItems.add(book);
-    }
+
 }

@@ -2,11 +2,12 @@ package com.kishkan91.Repository;
 
 import com.kishkan91.Items.Book;
 
-import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public interface BookRepo {
-    ArrayList<Book> bookItems = new ArrayList<>();
-    public ArrayList<Book> getBooks();
-    public void addBook (Book book);
-    //public void removeBookByName (String bookName);
+    Map<String, Book> books = new HashMap<String, Book>();
+
+    public void addBook (Book book, String decimalNumber);
+
 }

@@ -1,7 +1,8 @@
 package com.kishkan91.Handlers;
 
+import com.kishkan91.Items.Book;
 import com.kishkan91.Repository.BookRepo;
-import com.kishkan91.Repository.BookRepoImpl;
+
 
 public class LibraryHandlerImpl implements LibraryHandler {
     BookRepo bookRepo;
@@ -10,9 +11,9 @@ public class LibraryHandlerImpl implements LibraryHandler {
         this.bookRepo = bookRepo;
     }
 
-    public void addBook(String bookName, String authorName, int decimalNumber){
-        
-    }
+    public void addBook(Book book, String decimalNumber){
 
+        bookRepo.addBook(book, decimalNumber);
+    }
 
 }
