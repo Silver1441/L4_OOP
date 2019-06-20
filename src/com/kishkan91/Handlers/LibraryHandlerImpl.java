@@ -4,8 +4,11 @@ import com.kishkan91.Repository.BookRepo;
 import com.kishkan91.Repository.BookRepoImpl;
 
 public class LibraryHandlerImpl implements LibraryHandler {
+    BookRepo bookRepo;
 
-    BookRepo bookRepo = BookRepoImpl.getInstance();
+    public LibraryHandlerImpl(BookRepo bookRepo){
+        this.bookRepo = bookRepo;
+    }
 
 
 }
