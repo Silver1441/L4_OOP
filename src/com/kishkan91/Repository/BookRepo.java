@@ -9,5 +9,6 @@ public interface BookRepo {
     Map<String, Book> books = new HashMap<String, Book>();
 
     public void addBook (Book book, String decimalNumber);
+    public Map<String, Book> getBookList();
 
 }

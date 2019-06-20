@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class BookRepoImpl implements BookRepo {
     private static BookRepoImpl instance;
-    Map<String, Book> books = new HashMap<String, Book>();
+    Map<String, Book> books = new HashMap<String, Book>(20);
 
     private BookRepoImpl(){
     }
@@ -20,7 +20,13 @@ public class BookRepoImpl implements BookRepo {
     }
 
     public void addBook (Book book, String decimalNumber) {
-        books.put(decimalNumber, book);
+        if (books.size() <= 20){
+            books.put(decimalNumber, book);
+        }
+    }
+
+    public Map<String, Book> getBookList() {
+        return this.books;
     }
 
 
