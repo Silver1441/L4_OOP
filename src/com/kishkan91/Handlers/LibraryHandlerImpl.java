@@ -13,20 +13,20 @@ public class LibraryHandlerImpl implements LibraryHandler {
         this.bookRepo = bookRepo;
     }
 
-    public void addBook(Book book, String decimalNumber){
-        bookRepo.addBook(book, decimalNumber);
+    public void addBook(Book book, String bookKey){
+        bookRepo.addBook(book, bookKey);
     }
 
     public Map<String, Book> getBookList() {
         return bookRepo.getBookList();
     }
 
-    public Book getBook(String decimalNumber) {
-        return bookRepo.getBook(decimalNumber);
+    public Book getBook(String bookKey) {
+        return bookRepo.getBook(bookKey);
     }
 
-    public void removeBook(String decimalNumber) {
-        bookRepo.removeBook(decimalNumber);
+    public void removeBook(String bookKey) {
+        bookRepo.removeBook(bookKey);
     }
 
 }

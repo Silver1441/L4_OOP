@@ -8,9 +8,9 @@ import java.util.Map;
 public interface BookRepo {
     Map<String, Book> books = new HashMap<String, Book>();
 
-    public void addBook (Book book, String decimalNumber);
+    public void addBook (Book book, String bookKey);
     public Map<String, Book> getBookList();
-    public Book getBook(String decimalNumber);
-    public void removeBook(String decimalNumber);
+    public Book getBook(String bookKey);
+    public void removeBook(String bookKey);
 
 }

@@ -6,8 +6,8 @@ import java.util.Map;
 
 public interface LibraryHandler {
 
-    public void addBook(Book book, String decimalNumber);
+    public void addBook(Book book, String bookKey);
     public Map<String, Book> getBookList();
-    public Book getBook(String decimalNumber);
-    public void removeBook(String decimalNumber);
+    public Book getBook(String bookKey);
+    public void removeBook(String bookKey);
 }

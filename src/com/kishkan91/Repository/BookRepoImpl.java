@@ -19,9 +19,9 @@ public class BookRepoImpl implements BookRepo {
         return instance;
     }
 
-    public void addBook (Book book, String decimalNumber) {
+    public void addBook (Book book, String bookKey) {
         if (books.size() <= 20){
-            books.put(decimalNumber, book);
+            books.put(bookKey, book);
         }
     }
 
@@ -29,12 +29,12 @@ public class BookRepoImpl implements BookRepo {
         return this.books;
     }
 
-    public Book getBook(String decimalNumber) {
-        return books.get(decimalNumber);
+    public Book getBook(String bookKey) {
+        return books.get(bookKey);
     }
 
-    public void removeBook(String decimalNumber) {
-        books.remove(decimalNumber);
+    public void removeBook(String bookKey) {
+        books.remove(bookKey);
     }
 
 
