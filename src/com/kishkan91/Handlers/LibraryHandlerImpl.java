@@ -10,5 +10,9 @@ public class LibraryHandlerImpl implements LibraryHandler {
         this.bookRepo = bookRepo;
     }
 
+    public void addBook(String bookName, String authorName, int decimalNumber){
+        
+    }
+
 
 }
