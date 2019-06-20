@@ -9,4 +9,11 @@ public class BookImpl implements  Book {
         this.authorName = authorName;
     }
 
+    public String getBookName() {
+        return this.bookName;
+    }
+    public String getAuthorName() {
+        return this.authorName;
+    }
+
 }

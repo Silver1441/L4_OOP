@@ -29,5 +29,13 @@ public class BookRepoImpl implements BookRepo {
         return this.books;
     }
 
+    public Book getBook(String decimalNumber) {
+        return books.get(decimalNumber);
+    }
+
+    public void removeBook(String decimalNumber) {
+        books.remove(decimalNumber);
+    }
+
 
 }

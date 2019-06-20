@@ -21,4 +21,12 @@ public class LibraryHandlerImpl implements LibraryHandler {
         return bookRepo.getBookList();
     }
 
+    public Book getBook(String decimalNumber) {
+        return bookRepo.getBook(decimalNumber);
+    }
+
+    public void removeBook(String decimalNumber) {
+        bookRepo.removeBook(decimalNumber);
+    }
+
 }
