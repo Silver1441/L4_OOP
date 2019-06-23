@@ -5,19 +5,9 @@ import com.kishkan91.items.Book;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BookRepoImpl implements BookRepo {
-    private static BookRepoImpl instance;
+public class BookRepositoryImpl implements BookRepository {
+
     Map<String, Book> books = new HashMap<String, Book>(20);
-
-    private BookRepoImpl(){
-    }
-
-    public static BookRepoImpl getInstance() {
-        if (instance == null) {
-            instance = new BookRepoImpl();
-        }
-        return instance;
-    }
 
     public void addBook (Book book, String bookKey) {
         if (books.size() <= 20){

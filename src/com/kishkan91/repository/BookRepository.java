@@ -5,7 +5,7 @@ import com.kishkan91.items.Book;
 import java.util.HashMap;
 import java.util.Map;
 
-public interface BookRepo {
+public interface BookRepository {
     Map<String, Book> books = new HashMap<String, Book>();
 
     public void addBook (Book book, String bookKey);

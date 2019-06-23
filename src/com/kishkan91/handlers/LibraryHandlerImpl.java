@@ -1,32 +1,32 @@
 package com.kishkan91.handlers;
 
 import com.kishkan91.items.Book;
-import com.kishkan91.repository.BookRepo;
+import com.kishkan91.repository.BookRepository;
 
 import java.util.Map;
 
 
 public class LibraryHandlerImpl implements LibraryHandler {
-    BookRepo bookRepo;
+    BookRepository bookRepository;
 
-    public LibraryHandlerImpl(BookRepo bookRepo){
-        this.bookRepo = bookRepo;
+    public LibraryHandlerImpl(BookRepository bookRepository){
+        this.bookRepository = bookRepository;
     }
 
     public void addBook(Book book, String bookKey){
-        bookRepo.addBook(book, bookKey);
+        bookRepository.addBook(book, bookKey);
     }
 
     public Map<String, Book> getBookList() {
-        return bookRepo.getBookList();
+        return bookRepository.getBookList();
     }
 
     public Book getBook(String bookKey) {
-        return bookRepo.getBook(bookKey);
+        return bookRepository.getBook(bookKey);
     }
 
     public void removeBook(String bookKey) {
-        bookRepo.removeBook(bookKey);
+        bookRepository.removeBook(bookKey);
     }
 
 }
