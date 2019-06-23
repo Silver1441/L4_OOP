@@ -1,4 +1,4 @@
-package com.kishkan91.Items;
+package com.kishkan91.items;
 
 public class BookImpl implements  Book {
     String bookName;

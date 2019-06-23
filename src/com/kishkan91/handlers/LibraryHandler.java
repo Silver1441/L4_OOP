@@ -1,6 +1,6 @@
-package com.kishkan91.Handlers;
+package com.kishkan91.handlers;
 
-import com.kishkan91.Items.Book;
+import com.kishkan91.items.Book;
 
 import java.util.Map;
 

@@ -1,7 +1,7 @@
-package com.kishkan91.Handlers;
+package com.kishkan91.handlers;
 
-import com.kishkan91.Items.Book;
-import com.kishkan91.Repository.BookRepo;
+import com.kishkan91.items.Book;
+import com.kishkan91.repository.BookRepo;
 
 import java.util.Map;
 

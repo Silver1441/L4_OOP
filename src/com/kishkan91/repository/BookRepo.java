@@ -1,6 +1,6 @@
-package com.kishkan91.Repository;
+package com.kishkan91.repository;
 
-import com.kishkan91.Items.Book;
+import com.kishkan91.items.Book;
 
 import java.util.HashMap;
 import java.util.Map;

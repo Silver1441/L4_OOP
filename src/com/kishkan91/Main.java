@@ -1,11 +1,9 @@
 package com.kishkan91;
 
-import com.kishkan91.Handlers.LibraryHandler;
-import com.kishkan91.Handlers.LibraryHandlerImpl;
-import com.kishkan91.Items.Book;
-import com.kishkan91.Items.BookImpl;
-import com.kishkan91.Repository.BookRepo;
-import com.kishkan91.Repository.BookRepoImpl;
+import com.kishkan91.handlers.LibraryHandler;
+import com.kishkan91.handlers.LibraryHandlerImpl;
+import com.kishkan91.repository.BookRepo;
+import com.kishkan91.repository.BookRepoImpl;
 
 public class Main {
 
