@@ -1,7 +1,5 @@
 package com.kishkan91;
 
-import com.kishkan91.handlers.LibraryHandler;
-import com.kishkan91.handlers.LibraryHandlerImpl;
 import com.kishkan91.repository.BookRepository;
 import com.kishkan91.repository.BookRepositoryImpl;
 
@@ -10,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         //     ------1) Библиотека
         BookRepository bookRepository = new BookRepositoryImpl();
-        LibraryHandler libraryHandler = new LibraryHandlerImpl(bookRepository);
 
         /* //Проверка добавления и удаления книг
         libraryHandler.addBook(new BookImpl("Гарри Поттер и всякие штуки", "Д.К.Роулинг"), "AA001");
