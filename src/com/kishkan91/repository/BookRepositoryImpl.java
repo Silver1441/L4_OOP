@@ -33,4 +33,15 @@ public class BookRepositoryImpl implements BookRepository {
         }
     }
 
+    public Book getBookByKey(String bookKey) {
+        Book neededBook=null;
+        for (int i=0; i<libraryLength; i++){
+            if (bookKeys[i]==bookKey){
+                neededBook = books[i];
+                break;
+            }
+        }
+        return neededBook;
+    }
+
 }
