@@ -12,23 +12,19 @@ public class BookRepositoryImpl implements BookRepository {
 
     private Book[] books;  //Item link's holder
     private String[] bookKeys;  //Item Key's holder
-    private boolean[] isEmpty;  //Tag holder
 
     public BookRepositoryImpl(int libraryLength) {
         this.libraryLength = libraryLength;
         books = new Book[libraryLength];
         bookKeys = new String[libraryLength];
-        isEmpty = new boolean[libraryLength];
-        Arrays.fill(isEmpty, Boolean.TRUE);
     }
 
 
     public void addBook (String bookName, String authorName, String bookKey) { //TODO (?)Проверка на уникальность ключа
         for (int i=0; i<libraryLength; i++) {
-            if (isEmpty[i]==true) {
+            if (books[i]==null) {
                 books[i] = new BookImpl(bookName, authorName,bookKey);
                 bookKeys[i] = bookKey;
-                isEmpty[i] = false;
                 break;
             }
         }
@@ -38,7 +34,7 @@ public class BookRepositoryImpl implements BookRepository {
     public Book getBookByKey(String bookKey) {
         Book neededBook=null;
         for (int i=0; i<libraryLength; i++){
-            if (bookKeys[i]==bookKey){
+            if (bookKeys[i].equals(bookKey)){
                 neededBook = books[i];
                 break;
             }
@@ -49,24 +45,23 @@ public class BookRepositoryImpl implements BookRepository {
 
     public void deleteBookByKey(String bookKey) {
         for (int i=0; i<libraryLength; i++) {
-            if (bookKeys[i]==bookKey){
+            if (bookKeys[i].equals(bookKey)){
                 books[i] = null;
                 bookKeys[i] = null;
-                isEmpty[i] = true;
             }
         }
     }
 
 
     public boolean areSlotsFree() {
-        boolean isTrue=false;
+        boolean areSlotFree=false;
         for (int i=0; i<libraryLength; i++) {
-            if (isEmpty[i]==true){
-                isTrue = true;
+            if (books[i]==null){
+                areSlotFree=true;
                 break;
             }
         }
-        return isTrue;
+        return areSlotFree;
     }
 
 }
