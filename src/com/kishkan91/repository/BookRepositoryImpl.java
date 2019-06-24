@@ -12,23 +12,23 @@ public class BookRepositoryImpl implements BookRepository {
 
     private Book[] books;  //Item link's holder
     private String[] bookKeys;  //Item Key's holder
-    private boolean[] isTaken;  //Token holder
+    private boolean[] isEmpty;  //Tag holder
 
     public BookRepositoryImpl(int libraryLength) {
         this.libraryLength = libraryLength;
         books = new Book[libraryLength];
         bookKeys = new String[libraryLength];
-        isTaken = new boolean[libraryLength];
-        Arrays.fill(isTaken, Boolean.FALSE);
+        isEmpty = new boolean[libraryLength];
+        Arrays.fill(isEmpty, Boolean.TRUE);
     }
 
 
-    public void addBook (String bookName, String authorName, String bookKey) {
+    public void addBook (String bookName, String authorName, String bookKey) { //TODO (?)Проверка на уникальность ключа
         for (int i=0; i<libraryLength; i++) {
-            if (isTaken[i]==false) {
+            if (isEmpty[i]==true) {
                 books[i] = new BookImpl(bookName, authorName,bookKey);
                 bookKeys[i] = bookKey;
-                isTaken[i] = true;
+                isEmpty[i] = false;
                 break;
             }
         }
@@ -52,10 +52,21 @@ public class BookRepositoryImpl implements BookRepository {
             if (bookKeys[i]==bookKey){
                 books[i] = null;
                 bookKeys[i] = null;
-                isTaken[i] = false;
+                isEmpty[i] = true;
+            }
+        }
+    }
+
+
+    public boolean areSlotsFree() {
+        boolean isTrue=false;
+        for (int i=0; i<libraryLength; i++) {
+            if (isEmpty[i]==true){
+                isTrue = true;
                 break;
             }
         }
+        return isTrue;
     }
 
 }

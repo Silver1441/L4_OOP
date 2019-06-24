@@ -23,5 +23,12 @@ public class Main {
         bookRepository.deleteBookByKey("АА002");
         System.out.println("Check-deleteBook");
 
+        bookRepository.addBook("Гарри Поттер", "Женщина", "АБ001");
+        System.out.println("Check-newBook");
+
+        boolean areThereFreeSlots = bookRepository.areSlotsFree();
+        System.out.println("Check-areFree");
+
+
     }
 }
