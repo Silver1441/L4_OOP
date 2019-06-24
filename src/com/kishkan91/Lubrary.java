@@ -4,7 +4,7 @@ import com.kishkan91.items.Book;
 import com.kishkan91.repository.BookRepository;
 import com.kishkan91.repository.BookRepositoryImpl;
 
-public class Main {
+public class Lubrary {
 
     public static void main(String[] args) {
         //     ------1) Библиотека
