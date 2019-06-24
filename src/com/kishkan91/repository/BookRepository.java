@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface BookRepository {
 
-    public void addBook (Book book, String bookKey);
+    public void addBook (String bookName, String authorName, String bookKey);
 
 
 }
