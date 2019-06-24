@@ -7,25 +7,16 @@ import java.util.Map;
 
 public class BookRepositoryImpl implements BookRepository {
 
-    Map<String, Book> books = new HashMap<String, Book>(20);
+    int libraryLength;
+    Book[] books = new Book[libraryLength];
+    boolean[] isFree = new boolean[libraryLength];
+
+    public BookRepositoryImpl(int libraryLength) {
+        this.libraryLength = libraryLength;
+    }
 
     public void addBook (Book book, String bookKey) {
-        if (books.size() <= 20){
-            books.put(bookKey, book);
-        }
-    }
 
-    public Map<String, Book> getBookList() {
-        return this.books;
     }
-
-    public Book getBook(String bookKey) {
-        return books.get(bookKey);
-    }
-
-    public void removeBook(String bookKey) {
-        books.remove(bookKey);
-    }
-
 
 }

@@ -6,11 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public interface BookRepository {
-    Map<String, Book> books = new HashMap<String, Book>();
 
     public void addBook (Book book, String bookKey);
-    public Map<String, Book> getBookList();
-    public Book getBook(String bookKey);
-    public void removeBook(String bookKey);
+
 
 }
