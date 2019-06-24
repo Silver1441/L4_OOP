@@ -22,6 +22,7 @@ public class BookRepositoryImpl implements BookRepository {
         Arrays.fill(isTaken, Boolean.FALSE);
     }
 
+
     public void addBook (String bookName, String authorName, String bookKey) {
         for (int i=0; i<libraryLength; i++) {
             if (isTaken[i]==false) {
@@ -33,6 +34,7 @@ public class BookRepositoryImpl implements BookRepository {
         }
     }
 
+
     public Book getBookByKey(String bookKey) {
         Book neededBook=null;
         for (int i=0; i<libraryLength; i++){
@@ -42,6 +44,18 @@ public class BookRepositoryImpl implements BookRepository {
             }
         }
         return neededBook;
+    }
+
+
+    public void deleteBookByKey(String bookKey) {
+        for (int i=0; i<libraryLength; i++) {
+            if (bookKeys[i]==bookKey){
+                books[i] = null;
+                bookKeys[i] = null;
+                isTaken[i] = false;
+                break;
+            }
+        }
     }
 
 }

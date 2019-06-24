@@ -9,15 +9,19 @@ public class Main {
     public static void main(String[] args) {
         //     ------1) Библиотека
         //              book items constructor: (String bookName, String authorName, String bookKey)
-        BookRepository bookRepository = new BookRepositoryImpl(5);
+        BookRepository bookRepository = new BookRepositoryImpl(3);
 
         bookRepository.addBook("Дюна", "Ф.Герберт", "АА001");
         bookRepository.addBook("8r14", "Отд.001", "АА002");
         bookRepository.addBook("Стража Стража", "Т.Пратчетт", "АА003");
-        System.out.println("Check-addBock");
+        bookRepository.addBook("This will not be added", "This will not be added", "This will not be added");
+        System.out.println("Check-addBook");
 
         Book book = bookRepository.getBookByKey("АА002");
-        System.out.println("Check-getBock");
+        System.out.println("Check-getBook");
+
+        bookRepository.deleteBookByKey("АА002");
+        System.out.println("Check-deleteBook");
 
     }
 }
