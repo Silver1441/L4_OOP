@@ -8,5 +8,9 @@ public class StudentBuilderImpl implements StudentBuilder {
         this.numberOfStudents = numberOfStudents;
     }
 
+    private void makeStudent (){
+        
+    }
+
 
 }
