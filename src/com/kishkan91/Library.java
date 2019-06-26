@@ -2,7 +2,6 @@ package com.kishkan91;
 
 import com.kishkan91.demoService.DemoService;
 import com.kishkan91.demoService.LibraryDemo;
-import com.kishkan91.items.Book;
 import com.kishkan91.repository.BookRepositoryImpl;
 import com.kishkan91.repository.Repository;
 
