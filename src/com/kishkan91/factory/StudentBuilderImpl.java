@@ -1,28 +1,35 @@
 package com.kishkan91.factory;
 
+import com.kishkan91.items.NamesHolder;
 import com.kishkan91.items.Student;
+import com.kishkan91.items.StudentProgress;
+import com.kishkan91.support_classes.Randomizer;
 
-public class StudentBuilderImpl /*implements ItemBuilder*/ {
-    //Create items via randomisation
+public class StudentBuilderImpl implements ItemBuilder {
 
-    String[] maleNames = {"Александр", "Андрей", "Василий","Виталий", "Борис", "Григорий",
-            "Евгений", "Николай", "Люций", "Максим", "Сергей", "Тимур", "Федор"};
-    String[] maleSurnames = {"Афанасьев", "Белов", "Гордеев", "Захаров", "Игнатьев", "Карпов", "Князев", "Кузнецов",
-            "Лукин", "Морозов", "Попов", "Рябов", "Сидоров", "Федоров", "Яковлев"};
+    ItemBuilder<StudentProgress>  progressBuilder;
 
-    String[] femaleNames = {"Августина", "Аделаида", "Анастасия", "Анна", "Айгуль",  "Бажена", "Берта",
-            "Василиса", "Вероника", "Венера", "Зульфия", "Любава", "Номина", "Руслана", "Тора", "Юлия"};
-    String[] femaleSurnames = {"Афанасьева", "Белова", "Богданова", "Громова", "Зайцева", "Калинина",
-            "Колесникова", "Кузнецйова", "Назарова", "Новикова", "Орлова", "Хансен", "Яковлева"};
-
-/*
-    private Student makeItem (){
-
-        int genderDeterminer = (int) (Math.random()*2);
-        if (genderDeterminer==0) {   //male student
-            String name =
-        }
+    public StudentBuilderImpl(ItemBuilder<StudentProgress>  progressBuilder){
+        this. progressBuilder =  progressBuilder;
     }
-*/
+
+    public Student makeItem(){
+
+        int genderDeterminer = Randomizer.makeRandom(0, 2);
+        String name;
+        String surName;
+
+        if (genderDeterminer==0) {   //male student
+            name = NamesHolder.maleNames[Randomizer.makeRandom(0, NamesHolder.maleNames.length)];
+            surName = NamesHolder.maleSurnames[Randomizer.makeRandom(0, NamesHolder.maleSurnames.length)];
+
+        } else {   //female student
+            name = NamesHolder.femaleNames[Randomizer.makeRandom(0, NamesHolder.femaleNames.length)];
+            surName = NamesHolder.femaleSurnames[Randomizer.makeRandom(0, NamesHolder.femaleSurnames.length)];
+
+        }
+        return (new Student(progressBuilder.makeItem(), name, surName));
+    }
+
 
 }

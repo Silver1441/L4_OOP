@@ -1,4 +1,4 @@
-package com.kishkan91.demoService;
+package com.kishkan91.demo_service;
 
 public interface DemoService {
 

@@ -1,7 +1,6 @@
-package com.kishkan91.demoService;
+package com.kishkan91.demo_service;
 
 import com.kishkan91.items.Book;
-import com.kishkan91.repository.BookRepositoryImpl;
 import com.kishkan91.repository.Repository;
 
 //              book items constructor: (String bookName, String authorName, String bookKey)
