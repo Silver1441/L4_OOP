@@ -1,13 +1,13 @@
 package com.kishkan91.factory;
 
-import com.kishkan91.items.NamesHolder;
+import com.kishkan91.repository.NamesHolder;
 import com.kishkan91.items.Student;
 import com.kishkan91.items.StudentProgress;
 import com.kishkan91.support_classes.Randomizer;
 
 public class StudentBuilderImpl implements ItemBuilder {
 
-    ItemBuilder<StudentProgress>  progressBuilder;
+    private ItemBuilder<StudentProgress>  progressBuilder;
 
     public StudentBuilderImpl(ItemBuilder<StudentProgress>  progressBuilder){
         this. progressBuilder =  progressBuilder;
