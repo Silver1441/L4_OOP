@@ -1,4 +1,4 @@
-package com.kishkan91.support_classes;
+package com.kishkan91.support;
 
 public class Randomizer {
 

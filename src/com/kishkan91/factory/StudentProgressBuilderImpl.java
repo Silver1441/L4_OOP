@@ -1,7 +1,7 @@
 package com.kishkan91.factory;
 
 import com.kishkan91.items.StudentProgress;
-import com.kishkan91.support_classes.Randomizer;
+import com.kishkan91.support.Randomizer;
 
 public class StudentProgressBuilderImpl implements ItemBuilder {
     //StudentProgress constructor (int chemistry, int lsf, int maths, int physics, int philosophy)
