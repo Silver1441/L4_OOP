@@ -6,7 +6,6 @@ import com.kishkan91.factory.StudentProgressBuilderImpl;
 import com.kishkan91.items.Group;
 import com.kishkan91.items.Student;
 import com.kishkan91.items.StudentProgress;
-import com.kishkan91.support.ArithmeticalMean;
 
 
 public class StudentMain {
@@ -15,7 +14,7 @@ public class StudentMain {
 
         ItemBuilder<StudentProgress> progressBuilder = new StudentProgressBuilderImpl();
         ItemBuilder<Student> studentBuilder = new StudentBuilderImpl(progressBuilder);
-        Group group = new Group(3, "Группа №1", studentBuilder);
+        Group group = new Group(10, "Группа №1", studentBuilder);
 
         System.out.println("Check");
 
