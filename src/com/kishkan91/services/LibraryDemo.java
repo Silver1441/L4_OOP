@@ -1,4 +1,4 @@
-package com.kishkan91.demo_service;
+package com.kishkan91.services;
 
 import com.kishkan91.items.Book;
 import com.kishkan91.repository.Repository;

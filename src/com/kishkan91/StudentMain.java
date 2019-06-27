@@ -6,6 +6,9 @@ import com.kishkan91.factory.StudentProgressBuilderImpl;
 import com.kishkan91.items.Group;
 import com.kishkan91.items.Student;
 import com.kishkan91.items.StudentProgress;
+import com.kishkan91.support_classes.ArithmeticalMean;
+import com.kishkan91.support_classes.DoubleFormatter;
+
 
 public class StudentMain {
 
@@ -15,6 +18,7 @@ public class StudentMain {
         ItemBuilder<Student> studentBuilder = new StudentBuilderImpl(progressBuilder);
         Group group = new Group(12, "Группа №1", studentBuilder);
 
+        double test = ArithmeticalMean.getMean(5, 12, 6);
         System.out.println("Check");
 
     }
