@@ -40,4 +40,8 @@ public class Group {
     public double getGroupsGradePointAverage() {
         return groupsGradePointAverage;
     }
+
+    public Student[] getStudentsList() {
+        return students;
+    }
 }

@@ -6,6 +6,8 @@ import com.kishkan91.factory.StudentProgressBuilderImpl;
 import com.kishkan91.items.Group;
 import com.kishkan91.items.Student;
 import com.kishkan91.items.StudentProgress;
+import com.kishkan91.services.DemoService;
+import com.kishkan91.services.StudentsDemo;
 
 
 public class StudentMain {
@@ -14,9 +16,9 @@ public class StudentMain {
 
         ItemBuilder<StudentProgress> progressBuilder = new StudentProgressBuilderImpl();
         ItemBuilder<Student> studentBuilder = new StudentBuilderImpl(progressBuilder);
-        Group group = new Group(10, "Группа №1", studentBuilder);
+        Group group = new Group(8, "№1", studentBuilder);
+        DemoService demo = new StudentsDemo(group);
 
-        System.out.println("Check");
-
+        demo.makeTest();
     }
 }
