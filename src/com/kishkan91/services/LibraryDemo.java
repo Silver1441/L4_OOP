@@ -16,22 +16,31 @@ public class LibraryDemo implements DemoService {
     public void makeTest() {
 
         bookRepository.addBook(new Book("Дюна", "Ф.Герберт", "АА001"));
-        bookRepository.addBook(new Book("8r14", "Отд.001", "АА002"));
+        bookRepository.addBook(new Book("8k14", "Отд.001", "АА002"));
         bookRepository.addBook(new Book("Стража Стража", "Т.Пратчетт", "АА003"));
         bookRepository.addBook(new Book("This will not be added", "This will not be added", "This will not be added"));
-        System.out.println("Check-addBook");
+        System.out.println("  Список книг добавленных в репозиторий:");
+        System.out.println(bookRepository.getBookByKey("АА001").getAuthorName()+ ": " +
+                bookRepository.getBookByKey("АА001").getBookName());
+        System.out.println(bookRepository.getBookByKey("АА002").getAuthorName()+ ": " +
+                bookRepository.getBookByKey("АА002").getBookName());
+        System.out.println(bookRepository.getBookByKey("АА003").getAuthorName()+ ": " +
+                bookRepository.getBookByKey("АА003").getBookName());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
 
         Book book = bookRepository.getBookByKey("АА002");
-        System.out.println("Check-getBook");
-
         bookRepository.deleteBookByKey("АА002");
-        System.out.println("Check-deleteBook");
+        System.out.println();
+        System.out.println("  Удаление книги:");
+        System.out.println(book.getAuthorName() + ": " + book.getBookName());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
 
-        bookRepository.addBook(new Book("Гарри Поттер", "Женщина", "АБ001"));
-        System.out.println("Check-newBook");
-
-        boolean areThereFreeSlots = bookRepository.areSlotsFree();
-        System.out.println("Check-areFree");
+        bookRepository.addBook(new Book("Гарри Поттер", "Д.Роулинг", "АБ001"));
+        System.out.println();
+        System.out.println("  Добавлена книга:");
+        System.out.println(bookRepository.getBookByKey("АБ001").getAuthorName()+ ": " +
+                bookRepository.getBookByKey("АБ001").getBookName());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
 
     }
 

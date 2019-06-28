@@ -8,7 +8,7 @@ import com.kishkan91.repository.Repository;
 public class Library {
 
     public static void main(String[] args) {
-        //     ------1) Библиотека
+
         Repository bookRepository = new BookRepositoryImpl(3);
         DemoService demo = new LibraryDemo(bookRepository);
 

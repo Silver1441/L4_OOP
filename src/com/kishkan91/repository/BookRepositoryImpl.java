@@ -5,7 +5,7 @@ import com.kishkan91.items.Book;
 
 public class BookRepositoryImpl implements Repository {
 
-    private Book[] books;  //Item link's holder
+    private Book[] books;
 
     public BookRepositoryImpl(int libraryLength) {
         books = new Book[libraryLength];
