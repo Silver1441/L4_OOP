@@ -12,6 +12,10 @@ public class Abiturients {
     private ItemBuilder<Student> studentBuilder;
 
     public Abiturients (int numberOfAbiturients, int availableSlots, ItemBuilder<Student> studentBuilder) {
+        if (numberOfAbiturients<=availableSlots){
+            availableSlots = numberOfAbiturients;
+        }
+
         this.studentBuilder = studentBuilder;
         abiturients = new Student[numberOfAbiturients];
         abiturientsTaken = new Student[availableSlots];
@@ -56,6 +60,22 @@ public class Abiturients {
                 }
             } //initializing's ending.
         }
+    }
+
+    public int getNumberOfAbiturients() {
+        return abiturients.length;
+    }
+
+    public int getNumberOfAvailableSlots() {
+        return abiturientsTaken.length;
+    }
+
+    public Student[] getAbiturientsList() {
+        return abiturients;
+    }
+
+    public Student[] getAbiturientsTakenList() {
+        return abiturientsTaken;
     }
 
 }
