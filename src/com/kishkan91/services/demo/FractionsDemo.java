@@ -14,6 +14,7 @@ public class FractionsDemo implements DemoService {
     }
 
     public void makeTest() {
+        Fraction resultFraction;
 
         System.out.println(" Исходные дроби:");
         System.out.println(firstFraction.getNumerator() + "/" + firstFraction.getDenominator() + "   " +
@@ -26,29 +27,25 @@ public class FractionsDemo implements DemoService {
         System.out.println(firstFraction.getNumerator() + "/" + firstFraction.getDenominator() + "   " +
                 secondFraction.getNumerator() + "/" + secondFraction.getDenominator());
         System.out.println();
-/*
+
         System.out.println(" Сложение дробей:");
-        fractionsCalculator.sumTheFractions();
-        System.out.println(fractionsCalculator.getResultNumerator() + "/" + fractionsCalculator.getResultDenominator());
+        resultFraction = sumTheFractions(firstFraction, secondFraction);
+        System.out.println(resultFraction.getNumerator() + "/" + resultFraction.getDenominator());
         System.out.println();
 
         System.out.println(" Вычитание дробей:");
-        fractionsCalculator.subtractTheFractions();
-        System.out.println(fractionsCalculator.getResultNumerator() + "/" + fractionsCalculator.getResultDenominator());
+        resultFraction = subtractTheFractions(firstFraction, secondFraction);
+        System.out.println(resultFraction.getNumerator() + "/" + resultFraction.getDenominator());
         System.out.println();
 
         System.out.println(" Умножение дробей:");
-        fractionsCalculator.multiplyTheFractions();
-        System.out.println(fractionsCalculator.getResultNumerator() + "/" + fractionsCalculator.getResultDenominator());
+        resultFraction = multiplyTheFractions(firstFraction, secondFraction);
+        System.out.println(resultFraction.getNumerator() + "/" + resultFraction.getDenominator());
         System.out.println();
 
         System.out.println(" Деление дробей:");
-        fractionsCalculator.divideTheFractions();
-        System.out.println(fractionsCalculator.getResultNumerator() + "/" + fractionsCalculator.getResultDenominator());
+        resultFraction = divideTheFractions(firstFraction, secondFraction);
+        System.out.println(resultFraction.getNumerator() + "/" + resultFraction.getDenominator());
         System.out.println();
-
- */
-
     }
-
 }
