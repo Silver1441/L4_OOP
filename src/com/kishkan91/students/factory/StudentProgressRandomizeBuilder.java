@@ -2,7 +2,7 @@ package com.kishkan91.students.factory;
 
 import com.kishkan91.students.entities.StudentProgress;
 
-import static com.kishkan91.support.Randomizer.makeRandom;
+import static com.kishkan91.services.Randomizer.makeRandom;
 
 public class StudentProgressRandomizeBuilder implements EntitiesBuilder {
     //StudentProgress constructor (int chemistry, int lsf, int maths, int physics, int philosophy)

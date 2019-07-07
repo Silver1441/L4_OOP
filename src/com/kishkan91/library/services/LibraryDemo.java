@@ -1,7 +1,8 @@
-package com.kishkan91.services.demo;
+package com.kishkan91.library.services;
 
 import com.kishkan91.library.entities.Book;
 import com.kishkan91.library.repository.Repository;
+import com.kishkan91.services.DemoService;
 
 public class LibraryDemo implements DemoService {
     Repository bookRepository;

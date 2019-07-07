@@ -1,6 +1,6 @@
 package com.kishkan91.students.entities;
 
-import com.kishkan91.support.ArithmeticalMean;
+import com.kishkan91.services.ArithmeticalMean;
 
 public class StudentProgress {
     private int chemistry;

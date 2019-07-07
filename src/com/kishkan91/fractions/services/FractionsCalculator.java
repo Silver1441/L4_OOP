@@ -2,7 +2,7 @@ package com.kishkan91.fractions.services;
 
 import com.kishkan91.fractions.entities.Fraction;
 
-import static com.kishkan91.support.CommonFactorDeterminant.determineCommonFactor;
+import static com.kishkan91.services.CommonFactorDeterminant.determineCommonFactor;
 import static java.lang.Math.abs;
 
 public class FractionsCalculator {

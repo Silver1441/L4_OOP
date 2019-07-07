@@ -3,7 +3,7 @@ package com.kishkan91.students.repository;
 import com.kishkan91.students.entities.Student;
 import com.kishkan91.students.factory.EntitiesBuilder;
 
-import static com.kishkan91.support.ArithmeticalMean.getMean;
+import static com.kishkan91.services.ArithmeticalMean.getMean;
 
 public class Group {
     private String name;

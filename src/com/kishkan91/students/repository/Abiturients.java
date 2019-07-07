@@ -2,10 +2,9 @@ package com.kishkan91.students.repository;
 
 import com.kishkan91.students.entities.Student;
 import com.kishkan91.students.factory.EntitiesBuilder;
-import com.kishkan91.support.ArrayReverser;
+import com.kishkan91.students.services.AbiturientsGradesDescendingComparator;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Abiturients {
     private Student[] abiturients;
@@ -32,30 +31,10 @@ public class Abiturients {
     }
 
     private void makeTakenAbiturientsList() {
-        double[] abiturientsAverageRates = new double[abiturients.length];
-        for (int i = 0; i < abiturients.length; i++) {
-            abiturientsAverageRates[i] = abiturients[i].getGradePointAverage();
-        }
+        Arrays.sort(abiturients, new AbiturientsGradesDescendingComparator());
 
-        Arrays.sort(abiturientsAverageRates);
-        ArrayReverser.reverseTheArray(abiturientsAverageRates);
-
-        //filling the abiturientsTaken array;
         for (int i = 0; i < abiturientsTaken.length; i++) {
-            if (i == 0) { //hard initializing the [0] element in array to prevent "array[-1]" exception in further comparing;
-                for (int j = 0; j < abiturients.length; j++) {
-                    if (abiturientsAverageRates[0] == abiturients[j].getGradePointAverage()) {
-                        abiturientsTaken[0] = abiturients[j];
-                    }
-                }
-            } else { //initializing every other element in array;
-                for (int j = 0; j < abiturients.length; j++) {
-                    if (abiturientsAverageRates[i] == abiturients[j].getGradePointAverage()
-                            && abiturients[j] != abiturientsTaken[i - 1]) { //this comparing should prevent including the same abiturient two times;
-                        abiturientsTaken[i] = abiturients[j];
-                    }
-                }
-            } //initializing's ending.
+            abiturientsTaken[i] = abiturients[i];
         }
     }
 

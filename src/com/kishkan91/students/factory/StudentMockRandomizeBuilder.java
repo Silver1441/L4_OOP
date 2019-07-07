@@ -3,7 +3,7 @@ package com.kishkan91.students.factory;
 import com.kishkan91.students.entities.Student;
 import com.kishkan91.students.entities.StudentProgress;
 
-import static com.kishkan91.support.Randomizer.makeRandom;
+import static com.kishkan91.services.Randomizer.makeRandom;
 import static com.kishkan91.students.staticholder.NamesHolder.*;
 
 public class StudentMockRandomizeBuilder implements EntitiesBuilder {

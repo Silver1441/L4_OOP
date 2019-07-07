@@ -6,8 +6,8 @@ import com.kishkan91.students.factory.StudentProgressRandomizeBuilder;
 import com.kishkan91.students.repository.Abiturients;
 import com.kishkan91.students.entities.Student;
 import com.kishkan91.students.entities.StudentProgress;
-import com.kishkan91.services.demo.AbiturientDemo;
-import com.kishkan91.services.demo.DemoService;
+import com.kishkan91.students.services.AbiturientDemo;
+import com.kishkan91.services.DemoService;
 
 public class AbiturientMain {
     public static void main(String[] args) {
