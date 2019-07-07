@@ -6,79 +6,51 @@ import static com.kishkan91.support.CommonFactorDeterminant.determineCommonFacto
 import static java.lang.Math.abs;
 
 public class FractionsCalculator {
-    private Fraction firstFraction;
-    private Fraction secondFraction;
-
-    private int resultDenominator;
-    private int resultNumerator;
-
-    public FractionsCalculator(Fraction firstFraction, Fraction secondFraction) {
-        this.firstFraction = firstFraction;
-        this.secondFraction = secondFraction;
-
+    public static void makeFractionsSimpler(Fraction fraction) {
+        int commonFactor = determineCommonFactor(abs(fraction.getNumerator()), fraction.getDenominator());
+        fraction.setNumerator(fraction.getNumerator() / commonFactor);
+        fraction.setDenominator(fraction.getDenominator() / commonFactor);
     }
 
-    public void makeFractionsSimpler() {
-        int CommonFactor = determineCommonFactor(abs(firstFraction.getNumerator()), firstDenominator);
-        firstNumerator = firstNumerator / CommonFactor;
-        firstDenominator = firstDenominator / CommonFactor;
+    public static Fraction sumTheFractions(Fraction firstFraction, Fraction secondFraction) {
+        int resultNumerator = (firstFraction.getNumerator() * secondFraction.getDenominator()) +
+                (secondFraction.getNumerator() * firstFraction.getDenominator());
 
-        CommonFactor = determineCommonFactor(abs(secondNumerator), secondDenominator);
-        secondNumerator = secondNumerator / CommonFactor;
-        secondDenominator = secondDenominator / CommonFactor;
+        int resultDenominator = secondFraction.getDenominator() * firstFraction.getDenominator();
+
+        Fraction resultFraction = new Fraction(resultNumerator, resultDenominator);
+        makeFractionsSimpler(resultFraction);
+        return resultFraction;
     }
 
-    public void makeResultFractionSimpler() {
-        int CommonFactor = determineCommonFactor(abs(resultNumerator), resultDenominator);
-        resultNumerator = resultNumerator / CommonFactor;
-        resultDenominator = resultDenominator / CommonFactor;
+    public static Fraction subtractTheFractions(Fraction firstFraction, Fraction secondFraction) {
+        int resultNumerator = (firstFraction.getNumerator() * secondFraction.getDenominator()) -
+                (secondFraction.getNumerator() * firstFraction.getDenominator());
+
+        int resultDenominator = secondFraction.getDenominator() * firstFraction.getDenominator();
+
+        Fraction resultFraction = new Fraction(resultNumerator, resultDenominator);
+        makeFractionsSimpler(resultFraction);
+        return resultFraction;
     }
 
-    public void sumTheFractions() {
-        resultDenominator = secondDenominator * firstDenominator;
-        resultNumerator = (firstNumerator * secondDenominator) + (secondNumerator * firstDenominator);
-        this.makeResultFractionSimpler();
+    public static Fraction multiplyTheFractions(Fraction firstFraction, Fraction secondFraction) {
+        int resultNumerator = firstFraction.getNumerator() * secondFraction.getNumerator();
+
+        int resultDenominator = firstFraction.getDenominator() * secondFraction.getDenominator();
+
+        Fraction resultFraction = new Fraction(resultNumerator, resultDenominator);
+        makeFractionsSimpler(resultFraction);
+        return resultFraction;
     }
 
-    public void subtractTheFractions() {
-        resultDenominator = secondDenominator * firstDenominator;
-        resultNumerator = (firstNumerator * secondDenominator) - (secondNumerator * firstDenominator);
-        this.makeResultFractionSimpler();
-    }
+    public static Fraction divideTheFractions(Fraction firstFraction, Fraction secondFraction) {
+        int resultNumerator = firstFraction.getNumerator() * secondFraction.getDenominator();
 
-    public void multiplyTheFractions() {
-        resultNumerator = firstNumerator * secondNumerator;
-        resultDenominator = firstDenominator * secondDenominator;
-        this.makeResultFractionSimpler();
-    }
+        int resultDenominator = firstFraction.getDenominator() * secondFraction.getNumerator();
 
-    public void divideTheFractions() {
-        resultNumerator = firstNumerator * secondDenominator;
-        resultDenominator = firstDenominator * secondNumerator;
-        this.makeResultFractionSimpler();
-    }
-
-    public int getFirstNumerator() {
-        return firstNumerator;
-    }
-
-    public int getFirstDenominator() {
-        return firstDenominator;
-    }
-
-    public int getSecondNumerator() {
-        return secondNumerator;
-    }
-
-    public int getSecondDenominator() {
-        return secondDenominator;
-    }
-
-    public int getResultDenominator() {
-        return resultDenominator;
-    }
-
-    public int getResultNumerator() {
-        return resultNumerator;
+        Fraction resultFraction = new Fraction(resultNumerator, resultDenominator);
+        makeFractionsSimpler(resultFraction);
+        return resultFraction;
     }
 }
