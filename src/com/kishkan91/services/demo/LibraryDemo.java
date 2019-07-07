@@ -1,9 +1,9 @@
-package com.kishkan91.services;
+package com.kishkan91.services.demo;
 
-import com.kishkan91.items.Book;
+import com.kishkan91.entities.Book;
 import com.kishkan91.repository.Repository;
 
-//              book items constructor: (String bookName, String authorName, String bookKey)
+//              book entities constructor: (String bookName, String authorName, String bookKey)
 public class LibraryDemo implements DemoService {
 
 

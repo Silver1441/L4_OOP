@@ -1,36 +1,35 @@
-package com.kishkan91.items;
+package com.kishkan91.fractions.services;
 
-public class Fractions {
+import com.kishkan91.fractions.entities.Fraction;
 
-    private int firstNumerator;
-    private int firstDenominator;
+import static com.kishkan91.support.CommonFactorDeterminant.determineCommonFactor;
+import static java.lang.Math.abs;
 
-    private int secondNumerator;
-    private int secondDenominator;
+public class FractionsCalculator {
+    private Fraction firstFraction;
+    private Fraction secondFraction;
 
     private int resultDenominator;
     private int resultNumerator;
 
-    public Fractions(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {
-        this.firstNumerator=firstNumerator;
-        this.firstDenominator=firstDenominator;
+    public FractionsCalculator(Fraction firstFraction, Fraction secondFraction) {
+        this.firstFraction = firstFraction;
+        this.secondFraction = secondFraction;
 
-        this.secondNumerator=secondNumerator;
-        this.secondDenominator=secondDenominator;
     }
 
     public void makeFractionsSimpler() {
-        int CommonFactor = this.determineCommonFactor(Math.abs(firstNumerator), firstDenominator);
+        int CommonFactor = determineCommonFactor(abs(firstFraction.getNumerator()), firstDenominator);
         firstNumerator = firstNumerator / CommonFactor;
         firstDenominator = firstDenominator / CommonFactor;
 
-        CommonFactor = this.determineCommonFactor(Math.abs(secondNumerator), secondDenominator);
+        CommonFactor = determineCommonFactor(abs(secondNumerator), secondDenominator);
         secondNumerator = secondNumerator / CommonFactor;
         secondDenominator = secondDenominator / CommonFactor;
     }
 
     public void makeResultFractionSimpler() {
-        int CommonFactor = this.determineCommonFactor(Math.abs(resultNumerator), resultDenominator);
+        int CommonFactor = determineCommonFactor(abs(resultNumerator), resultDenominator);
         resultNumerator = resultNumerator / CommonFactor;
         resultDenominator = resultDenominator / CommonFactor;
     }
@@ -57,17 +56,6 @@ public class Fractions {
         resultNumerator = firstNumerator * secondDenominator;
         resultDenominator = firstDenominator * secondNumerator;
         this.makeResultFractionSimpler();
-    }
-    
-    
-
-    private static int determineCommonFactor(int a, int b) {
-        while (b !=0) {
-            int tmp = a%b;
-            a = b;
-            b = tmp;
-        }
-        return a;
     }
 
     public int getFirstNumerator() {

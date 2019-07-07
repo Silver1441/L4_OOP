@@ -1,6 +1,6 @@
 package com.kishkan91.factory;
 
-import com.kishkan91.items.StudentProgress;
+import com.kishkan91.entities.StudentProgress;
 import com.kishkan91.support.Randomizer;
 
 public class StudentProgressBuilderImpl implements ItemBuilder {

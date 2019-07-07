@@ -1,4 +1,4 @@
-package com.kishkan91.items;
+package com.kishkan91.entities;
 
 import com.kishkan91.support.ArithmeticalMean;
 

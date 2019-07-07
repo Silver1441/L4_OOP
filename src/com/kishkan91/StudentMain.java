@@ -3,11 +3,11 @@ package com.kishkan91;
 import com.kishkan91.factory.ItemBuilder;
 import com.kishkan91.factory.StudentBuilderImpl;
 import com.kishkan91.factory.StudentProgressBuilderImpl;
-import com.kishkan91.items.Group;
-import com.kishkan91.items.Student;
-import com.kishkan91.items.StudentProgress;
-import com.kishkan91.services.DemoService;
-import com.kishkan91.services.StudentsDemo;
+import com.kishkan91.entities.Group;
+import com.kishkan91.entities.Student;
+import com.kishkan91.entities.StudentProgress;
+import com.kishkan91.services.demo.DemoService;
+import com.kishkan91.services.demo.StudentsDemo;
 
 
 public class StudentMain {

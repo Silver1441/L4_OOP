@@ -1,7 +1,7 @@
 package com.kishkan91;
 
-import com.kishkan91.services.DemoService;
-import com.kishkan91.services.LibraryDemo;
+import com.kishkan91.services.demo.DemoService;
+import com.kishkan91.services.demo.LibraryDemo;
 import com.kishkan91.repository.BookRepositoryImpl;
 import com.kishkan91.repository.Repository;
 

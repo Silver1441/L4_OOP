@@ -1,8 +1,8 @@
 package com.kishkan91.factory;
 
 import com.kishkan91.repository.NamesHolder;
-import com.kishkan91.items.Student;
-import com.kishkan91.items.StudentProgress;
+import com.kishkan91.entities.Student;
+import com.kishkan91.entities.StudentProgress;
 import com.kishkan91.support.Randomizer;
 
 public class StudentBuilderImpl implements ItemBuilder {

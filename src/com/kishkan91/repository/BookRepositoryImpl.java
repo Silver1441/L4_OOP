@@ -1,7 +1,7 @@
 package com.kishkan91.repository;
 
 
-import com.kishkan91.items.Book;
+import com.kishkan91.entities.Book;
 
 public class BookRepositoryImpl implements Repository {
 

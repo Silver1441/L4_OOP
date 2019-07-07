@@ -1,6 +1,6 @@
 package com.kishkan91.support;
 
-import com.kishkan91.items.StudentProgress;
+import com.kishkan91.entities.StudentProgress;
 
 public class ExcellentGradeStudentDeterminer {
 
