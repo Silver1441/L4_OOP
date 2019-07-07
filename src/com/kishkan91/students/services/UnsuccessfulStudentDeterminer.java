@@ -1,11 +1,10 @@
-package com.kishkan91.support;
+package com.kishkan91.students.services;
 
-import com.kishkan91.entities.StudentProgress;
+import com.kishkan91.students.entities.StudentProgress;
 
 public class UnsuccessfulStudentDeterminer {
 
-    public static boolean isUnsuccessful (StudentProgress progress) {
-
+    public static boolean isUnsuccessful(StudentProgress progress) {
         if (progress.getChemistry() == 2) {
             return true;
         } else if (progress.getLsf() == 2) {
@@ -19,8 +18,5 @@ public class UnsuccessfulStudentDeterminer {
         } else {
             return false;
         }
-
     }
-
-
 }

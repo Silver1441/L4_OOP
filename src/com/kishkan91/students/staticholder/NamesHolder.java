@@ -1,7 +1,6 @@
-package com.kishkan91.repository;
+package com.kishkan91.students.staticholder;
 
 public class NamesHolder {
-
     // Male:
     public static String[] maleNames = {"Александр", "Андрей", "Василий","Виталий", "Борис", "Григорий",
             "Евгений", "Николай", "Люций", "Максим", "Сергей", "Тимур", "Тракторин", "Федор"};

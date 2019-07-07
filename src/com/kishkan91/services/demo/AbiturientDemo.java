@@ -1,7 +1,7 @@
 package com.kishkan91.services.demo;
 
-import com.kishkan91.entities.Abiturients;
-import com.kishkan91.entities.Student;
+import com.kishkan91.students.repository.Abiturients;
+import com.kishkan91.students.entities.Student;
 
 public class AbiturientDemo implements DemoService {
 

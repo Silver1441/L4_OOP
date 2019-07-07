@@ -1,9 +1,8 @@
-package com.kishkan91.entities;
+package com.kishkan91.students.entities;
 
 import com.kishkan91.support.ArithmeticalMean;
 
 public class StudentProgress {
-
     private int chemistry;
     private int lsf;
     private int maths;
@@ -11,13 +10,13 @@ public class StudentProgress {
     private int philosophy;
     private double gradePointAverage;
 
-    public StudentProgress (int chemistry, int lsf, int maths, int physics, int philosophy) {
+    public StudentProgress(int chemistry, int lsf, int maths, int physics, int philosophy) {
         this.chemistry = chemistry;
         this.lsf = lsf;
         this.maths = maths;
         this.physics = physics;
         this.philosophy = philosophy;
-        this.gradePointAverage= ArithmeticalMean.getMean(chemistry, lsf, maths, physics, philosophy);
+        this.gradePointAverage = ArithmeticalMean.getMean(chemistry, lsf, maths, physics, philosophy);
     }
 
     public int getChemistry() {
@@ -43,5 +42,4 @@ public class StudentProgress {
     public double getGradePointAverage() {
         return gradePointAverage;
     }
-
 }

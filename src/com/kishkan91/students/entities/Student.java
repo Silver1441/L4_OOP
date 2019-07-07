@@ -1,7 +1,7 @@
-package com.kishkan91.entities;
+package com.kishkan91.students.entities;
 
-import com.kishkan91.support.ExcellentGradeStudentDeterminer;
-import com.kishkan91.support.UnsuccessfulStudentDeterminer;
+import com.kishkan91.students.services.ExcellentGradeStudentDeterminer;
+import com.kishkan91.students.services.UnsuccessfulStudentDeterminer;
 
 public class Student {
 
@@ -11,7 +11,7 @@ public class Student {
     private boolean isStudentExcellent;
     private boolean isStudentUnsuccessful;
 
-    public Student (StudentProgress progress, String name, String surname) {
+    public Student(StudentProgress progress, String name, String surname) {
         this.progress = progress;
         this.name = name;
         this.surname = surname;
@@ -23,8 +23,8 @@ public class Student {
         return name;
     }
 
-    public  String getSurname() {
-        return  surname;
+    public String getSurname() {
+        return surname;
     }
 
     public double getGradePointAverage() {

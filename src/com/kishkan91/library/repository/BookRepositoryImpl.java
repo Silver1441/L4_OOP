@@ -35,7 +35,7 @@ public class BookRepositoryImpl implements Repository {
         }
     }
 
-    public boolean areSlotsFree() {
+    public boolean isThereFreeSlot() {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 return true;

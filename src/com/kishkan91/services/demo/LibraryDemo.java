@@ -22,21 +22,21 @@ public class LibraryDemo implements DemoService {
                 bookRepository.getBookByKey("АА002").getBookName());
         System.out.println(bookRepository.getBookByKey("АА003").getAuthorName() + ": " +
                 bookRepository.getBookByKey("АА003").getBookName());
-        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.isThereFreeSlot());
 
         Book book = bookRepository.getBookByKey("АА002");
         bookRepository.deleteBookByKey("АА002");
         System.out.println();
         System.out.println("  Удаление книги:");
         System.out.println(book.getAuthorName() + ": " + book.getBookName());
-        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.isThereFreeSlot());
 
         bookRepository.addBook(new Book("Гарри Поттер", "Д.Роулинг", "АБ001"));
         System.out.println();
         System.out.println("  Добавлена книга:");
         System.out.println(bookRepository.getBookByKey("АБ001").getAuthorName() + ": " +
                 bookRepository.getBookByKey("АБ001").getBookName());
-        System.out.println("Наличие свободого места в репозитории: " + bookRepository.areSlotsFree());
+        System.out.println("Наличие свободого места в репозитории: " + bookRepository.isThereFreeSlot());
 
     }
 

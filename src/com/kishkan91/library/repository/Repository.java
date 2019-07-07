@@ -9,6 +9,6 @@ public interface Repository {
 
     void deleteBookByKey(String bookKey);
 
-    boolean areSlotsFree();
+    boolean isThereFreeSlot();
 
 }
