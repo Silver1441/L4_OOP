@@ -1,17 +1,15 @@
-package com.kishkan91.repository;
+package com.kishkan91.library.repository;
 
-
-import com.kishkan91.entities.Book;
+import com.kishkan91.library.entities.Book;
 
 public class BookRepositoryImpl implements Repository {
-
     private Book[] books;
 
     public BookRepositoryImpl(int libraryLength) {
         books = new Book[libraryLength];
     }
 
-    public void addBook(Book book) { //TODO (?)Проверка на уникальность ключа
+    public void addBook(Book book) {
         for (int i = 0; i < books.length; i++) {
             if (books[i] == null) {
                 books[i] = book;

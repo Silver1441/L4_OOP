@@ -1,7 +1,6 @@
-package com.kishkan91;
+package com.kishkan91.fractions;
 
 import com.kishkan91.fractions.entities.Fraction;
-import com.kishkan91.fractions.services.FractionsCalculator;
 import com.kishkan91.services.demo.DemoService;
 import com.kishkan91.services.demo.FractionsDemo;
 

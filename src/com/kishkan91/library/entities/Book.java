@@ -1,7 +1,6 @@
-package com.kishkan91.entities;
+package com.kishkan91.library.entities;
 
 public class Book {
-
     private String bookName;
     private String authorName;
     private String bookKey;
@@ -15,6 +14,7 @@ public class Book {
     public String getBookName() {
         return this.bookName;
     }
+
     public String getAuthorName() {
         return this.authorName;
     }
