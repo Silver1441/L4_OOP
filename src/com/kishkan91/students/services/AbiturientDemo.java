@@ -1,13 +1,13 @@
 package com.kishkan91.students.services;
 
 import com.kishkan91.services.DemoService;
-import com.kishkan91.students.repository.Abiturients;
 import com.kishkan91.students.entities.Student;
+import com.kishkan91.students.repository.AbiturientsRepository;
 
 public class AbiturientDemo implements DemoService {
-    Abiturients abiturients;
+    AbiturientsRepository abiturients;
 
-    public AbiturientDemo(Abiturients abiturients) {
+    public AbiturientDemo(AbiturientsRepository abiturients) {
         this.abiturients = abiturients;
     }
 
