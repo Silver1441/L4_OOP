@@ -1,45 +1,25 @@
 package com.kishkan91.students.repository;
 
 import com.kishkan91.students.entities.Student;
-import com.kishkan91.students.factory.EntitiesBuilder;
+import static com.kishkan91.students.services.GroupGradePointAverageCalculator.calculateGroupGradePointAverage;
 
-import static com.kishkan91.services.ArithmeticalMean.getMean;
-
-public class Group {
+public class Group implements GroupRepository {
     private String name;
     private Student[] students;
-    private EntitiesBuilder<Student> studentBuilder;
-    private double groupsGradePointAverage;
+    private double groupGradePointAverage;
 
-    public Group(int numberOfStudents, String name, EntitiesBuilder<Student> studentBuilder) {
-        students = new Student[numberOfStudents];
+    public Group(String name, Student[] students) {
         this.name = name;
-        this.studentBuilder = studentBuilder;
-
-        this.makeGroup();
-        this.calculateGroupsGradePointAverage();
-    }
-
-    private void makeGroup() {
-        for (int i = 0; i < students.length; i++) {
-            students[i] = studentBuilder.buildEntities();
-        }
-    }
-
-    private void calculateGroupsGradePointAverage() {
-        double[] averageGrades = new double[students.length];
-        for (int i = 0; i < students.length; i++) {
-            averageGrades[i] = students[i].getGradePointAverage();
-        }
-        groupsGradePointAverage = getMean(averageGrades);
+        this.students = students;
+        this.groupGradePointAverage = calculateGroupGradePointAverage(students);
     }
 
     public String getName() {
         return name;
     }
 
-    public double getGroupsGradePointAverage() {
-        return groupsGradePointAverage;
+    public double getGroupGradePointAverage() {
+        return groupGradePointAverage;
     }
 
     public Student[] getStudentsList() {
